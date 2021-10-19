@@ -1,0 +1,15 @@
+@import '@primer/css/index.scss';
+
+.sb-slot-placeholder {
+  border: 2px dashed red;
+  border-radius: 10px;
+  font-size: 22px;
+  color: gray;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  &.highlight {
+    background-color: #dfc3c3;
+  }
+}

@@ -1,0 +1,23 @@
+
+<div class="container-xl">
+  <div class="Layout Layout--sidebarPosition-end">
+    <div class="Layout-main border" id="sb-main-canvas" data-sb-component="root">
+      <div class="sb-slot-placeholder" data-sb-name="main">main</div>
+    </div>
+
+    <div class="Layout-sidebar border">
+      <% @component_manifest.each do |component_meta| %>
+        <% next unless component_meta["component"] == "Button" || component_meta["component"] == "Layout" %>
+        <div
+          draggable="true"
+          class="sb-component"
+          data-sb-component="<%= component_meta["component"] %>"
+          style="border: 1px solid black">
+            <%= component_meta["component"] %>
+        </div>
+      <% end %>
+      <div id="sb-settings">
+      </div>
+    </div>
+  </div>
+</div>
